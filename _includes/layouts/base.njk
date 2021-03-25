@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSWord to Eleventy</title>
+    <style>
+      .wrapper {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      nav > ol {
+        list-style-type: none;
+        display: flex;
+      }
+      nav > ol > li {
+        flex: 0 1 75px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <nav>
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li><a href="/page1">Page1</a></li>
+            <li><a href="/page2">Page2</a></li>
+            <li><a href="/page3">Page3</a></li>
+          </ol>
+        </nav>
+      </header>
+      <main>{{ content | safe }}</main>
+    </div>
+  </body>
+</html>
