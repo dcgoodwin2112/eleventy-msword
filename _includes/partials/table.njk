@@ -1,0 +1,23 @@
+<table>
+  {% if tableCaption %}
+    <caption>{{ tableCaption }}</caption>
+  {% endif %}
+  {% for row in tableData %}
+    {% if loop.first %}
+      <thead>
+        <tr>
+          {% for key, val in row %}
+            <th>{{ key }}</th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+      {% endif %}
+      <tr>
+        {% for key, val in row %}
+          <td>{{ val }}</td>
+        {% endfor %}
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>

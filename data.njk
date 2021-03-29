@@ -1,0 +1,9 @@
+<p>Excel Table 1</p>
+{% set tableData = xlsx.workbook1.Sheet1 %}
+{% set tableCaption = "Numbers! Some random values I put into excel." %}
+{% include "partials/table.njk" %}
+
+<p>Excel Table 2</p>
+{% set tableData = xlsx.workbook1.Sheet2 %}
+{% set tableCaption = "More Numbers! Some other random values I put into excel." %}
+{% include "partials/table.njk" %}
